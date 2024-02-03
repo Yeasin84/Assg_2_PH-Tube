@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-Tube</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="../input.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="flexnav items-center"
+            id="navbar-default">
+                <div class="ml-2">
+                    <img src="../images/Logo.png" class="h-8" alt="ph tube"/></div>
+                <div>
+                    <button onclick="sortByView()" class="mr-20 bg-violet-400 rounded-sm px-4 py-2 dark:md:hover:bg-violet-1000 ">Sort By View</button></div>
+                <div class="mr-4">
+                    <a href="./blog.html"><button class="bg-violet-400 rounded-sm px-4 py-2 dark:md:hover:bg-violet-600  ">Blog</button></a></div>
+            </div>
+          </nav>
+    </header>
+    <div>
+        <hr class="m-4">
+    </div>
+    <div id="categories-container" class="flex gap-4 justify-center mb-10">
+    </div>
+    <div id="content-container" class="flex flex-wrap gap-6 px-6">
+    </div>
+
+    <script src="../main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const burgerMenu = document.getElementById("burger-menu");
+            console.log(burgerMenu);
+            const navLinks = document.querySelector(".lg\\:flex");
+    
+            burgerMenu.addEventListener("click", () => {
+                console.log("clicking");
+                navLinks.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
