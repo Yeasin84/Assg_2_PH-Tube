@@ -21,7 +21,6 @@ const contents = document.getElementById("content-container");
             fetchData(element.category_id);
             increase = true;
         });
-
         categoryDiv.innerHTML = element.category;
         return categoryDiv;
     }
@@ -33,7 +32,6 @@ const contents = document.getElementById("content-container");
             .then(res => res.json())
             .then(doc => {
                 data = doc.data;
-
                 if (doc.status == false) {
                     data = null;
                     contents.innerHTML = `<div class="flex items-center justify-center gap-6">
@@ -87,7 +85,7 @@ const contents = document.getElementById("content-container");
             return;
         }
 
-        increase = !increase;
+        increase = false;
         data.sort((a, b) => {
             const aViews = parseFloat(a.others.views.slice(0, -1));
             const bViews = parseFloat(b.others.views.slice(0, -1));
